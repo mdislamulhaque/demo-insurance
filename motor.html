@@ -1,0 +1,1678 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Motor</title>
+    <script src="./js/sidebar.js" defer></script>
+    <script src="./js/step-from.js" defer></script>
+    <script src="./js/data-table.js" defer></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <div class="flex min-h-screen">
+      <!-- Overlay (hidden by default) -->
+      <div
+        id="overlay"
+        class="fixed inset-0 bg-black/40 z-40 hidden md:hidden"
+      ></div>
+
+      <!-- Sidebar -->
+      <div
+        class="fixed top-0 left-0 h-full w-72 bg-primary text-white p-4 transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-50 overflow-auto"
+        id="sidebar"
+      >
+        <nav class="">
+          <div class="flex justify-between md:justify-center items-center">
+            <img
+              src="./assets/image/viva_logo.png"
+              class="mb-6"
+              alt="viva_logo"
+            />
+            <!-- Close Button for small screens -->
+            <button id="closeSidebar" class="md:hidden mb-4 text-white text-xl">
+              <i class="ri-close-line text-3xl"></i>
+            </button>
+          </div>
+          <ul class="space-y-2">
+            <!-- Dashboard -->
+            <li>
+              <a
+                href="./dashboard.html"
+                class="flex gap-3 items-center p-2 hover:bg-primary-dark rounded"
+              >
+                <i class="ri-dashboard-fill text-2xl"></i>
+                <span>Dashboard</span>
+              </a>
+            </li>
+
+            <!-- Policy Management -->
+            <li>
+              <button
+                class="flex justify-between w-full items-center p-2 hover:bg-primary-dark rounded submenu-toggle"
+              >
+                <div class="flex gap-3 items-center">
+                  <i class="ri-file-paper-2-fill text-2xl"></i>
+                  <span>Policy Management</span>
+                </div>
+                <i
+                  class="ri-arrow-right-s-line arrow-icon transition-transform duration-200"
+                ></i>
+              </button>
+              <ul
+                class="ml-8 mt-1 space-y-1 hidden submenu overflow-hidden transition-all duration-300 ease-in-out max-h-0"
+              >
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >New Proposal</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >Pending Proposals</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >View Proposal</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >Quotation</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >View Quotation</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >Endorsement</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Underwriting -->
+             <li>
+              <button
+                class="flex justify-between w-full items-center p-2 hover:bg-primary-dark rounded submenu-toggle"
+              >
+                <div class="flex gap-3 items-center">
+                  <i class="ri-edit-fill text-2xl"></i>
+                  <span>Underwriting</span>
+                </div>
+                <i
+                  class="ri-arrow-right-s-line arrow-icon transition-transform duration-200"
+                ></i>
+              </button>
+              <ul
+                class="ml-8 mt-1 space-y-1 hidden submenu overflow-hidden transition-all duration-300 ease-in-out max-h-0"
+              >
+                <li>
+                   <li>
+              <button
+                class="flex justify-between w-full items-center p-2 hover:bg-primary-dark rounded submenu-toggle"
+              >
+                <div class="flex gap-3 items-center">
+                  
+                  <span>Motor Vivacom</span>
+                </div>
+                <i
+                  class="ri-arrow-right-s-line arrow-icon transition-transform duration-200"
+                ></i>
+              </button>
+              <ul
+                class="ml-8 mt-1 space-y-1 hidden submenu overflow-hidden transition-all duration-300 ease-in-out max-h-0"
+              >
+                
+                <li>
+                  <a href="./motor.html" class="block p-2 hover:bg-primary-dark rounded"
+                    >New Proposal</a
+                  >
+                </li>
+                <li>
+                  <a href="./pending.html" class="block p-2 hover:bg-primary-dark rounded"
+                    >Pending Proposals</a
+                  >
+                </li>
+                <li>
+                  <a href="./pending.html" class="block p-2 hover:bg-primary-dark rounded"
+                    >View Proposal</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >Quotation</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >View Quotation</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >Endorsement</a
+                  >
+                </li>
+                
+              </ul>
+            </li>
+                </li>
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >Fire Vivacom</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >Theft Class Vivacom</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >General Accident</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >Liability Vivacom</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >Engineering Vivacom</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >Miscellaneous Vivacom</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >Marine Vivacom</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >Minar Vivacom</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >Package Vivacom</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Claims Management -->
+            <li>
+              <button
+                class="flex justify-between w-full items-center p-2 hover:bg-primary-dark rounded submenu-toggle"
+              >
+                <div class="flex gap-3 items-center">
+                  <i class="ri-file-damage-fill text-2xl"></i>
+                  <span>Claims Management</span>
+                </div>
+                <i
+                  class="ri-arrow-right-s-line arrow-icon transition-transform duration-200"
+                ></i>
+              </button>
+              <ul
+                class="ml-8 mt-1 space-y-1 hidden submenu overflow-hidden transition-all duration-300 ease-in-out max-h-0"
+              >
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >Claim Manager</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >Claims Payment</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >Claim Settlement</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >Claim Reserves</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >Claims Paid Invoice</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >Claim Reopen/Close</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >Salvage Disposal</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Approvals -->
+            <li>
+              <button
+                class="flex justify-between w-full items-center p-2 hover:bg-primary-dark rounded submenu-toggle"
+              >
+                <div class="flex gap-3 items-center">
+                  <i class="ri-checkbox-circle-fill text-2xl"></i>
+                  <span>Approvals</span>
+                </div>
+                <i
+                  class="ri-arrow-right-s-line arrow-icon transition-transform duration-200"
+                ></i>
+              </button>
+              <ul
+                class="ml-8 mt-1 space-y-1 hidden submenu overflow-hidden transition-all duration-300 ease-in-out max-h-0"
+              >
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >CCC Claim Approvals</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >GM Claim Approvals</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >High Level Claim Approvals</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >Credit Claim Approval</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Financial Management -->
+            <li>
+              <button
+                class="flex justify-between w-full items-center p-2 hover:bg-primary-dark rounded submenu-toggle"
+              >
+                <div class="flex gap-3 items-center">
+                  <i class="ri-money-dollar-circle-fill text-2xl"></i>
+                  <span>Financial Management</span>
+                </div>
+                <i
+                  class="ri-arrow-right-s-line arrow-icon transition-transform duration-200"
+                ></i>
+              </button>
+              <ul
+                class="ml-8 mt-1 space-y-1 hidden submenu overflow-hidden transition-all duration-300 ease-in-out max-h-0"
+              >
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >Collect Payment</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >Paid Invoice</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >Bulk Collection</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >Intimation</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Administration -->
+            <li>
+              <button
+                class="flex justify-between w-full items-center p-2 hover:bg-primary-dark rounded submenu-toggle"
+              >
+                <div class="flex gap-3 items-center">
+                  <i class="ri-settings-3-fill text-2xl"></i>
+                  <span>Administration</span>
+                </div>
+                <i
+                  class="ri-arrow-right-s-line arrow-icon transition-transform duration-200"
+                ></i>
+              </button>
+              <ul
+                class="ml-8 mt-1 space-y-1 hidden submenu overflow-hidden transition-all duration-300 ease-in-out max-h-0"
+              >
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >User Management</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >Branches</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >Registration</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >Product</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >Reinsurance Settings</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >General Settings</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block p-2 hover:bg-primary-dark rounded"
+                    >SMS Management</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Other Menu Items -->
+            <li>
+              <a
+                href="#"
+                class="flex gap-3 items-center p-2 hover:bg-primary-dark rounded"
+              >
+                <i class="ri-search-line text-2xl"></i>
+                <span>Search</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex gap-3 items-center p-2 hover:bg-primary-dark rounded"
+              >
+                <i class="ri-file-text-line text-2xl"></i>
+                <span>Documentation</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex gap-3 items-center p-2 hover:bg-primary-dark rounded"
+              >
+                <i class="ri-arrow-go-back-line text-2xl"></i>
+                <span>Backdating</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex gap-3 items-center p-2 hover:bg-primary-dark rounded"
+              >
+                <i class="ri-check-line text-2xl"></i>
+                <span>Acknowledgement</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex gap-3 items-center p-2 hover:bg-primary-dark rounded"
+              >
+                <i class="ri-file-copy-line text-2xl"></i>
+                <span>Certificate Request</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex gap-3 items-center p-2 hover:bg-primary-dark rounded"
+              >
+                <i class="ri-bar-chart-box-line text-2xl"></i>
+                <span>System Reports</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Main content -->
+      <div class="flex-1 md:ml-72">
+        <!-- nav -->
+        <div
+          class="flex justify-between items-center ps-2 pr-6 py-6 border-b mb-6"
+        >
+          <div>
+            <!-- Toggle Button for small screens -->
+            <button
+              id="toggleSidebar"
+              class="md:hidden m-4 px-4 py-2 btn-primary text-white rounded"
+            >
+              <i class="ri-menu-3-line"></i>
+            </button>
+          </div>
+          <div>
+             <div class="flex items-center space-x-4">
+              <button
+                class="p-1 text-gray-400 rounded-full hover:text-gray-500 focus:outline-none"
+              >
+                <i class="fas fa-bell"></i>
+              </button>
+              <button
+                class="p-1 text-gray-400 rounded-full hover:text-gray-500 focus:outline-none"
+              >
+                <i class="fas fa-envelope"></i>
+              </button>
+              <img
+                class="w-10 h-10 rounded-full"
+                src="https://randomuser.me/api/portraits/women/44.jpg"
+                alt="Profile"
+              />
+              <div class="ml-3">
+                <p class="text-sm font-medium">Sarah Johnson</p>
+                <p class="text-xs text-blue-700">Agent</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- main form -->
+        <div class="min-h-screen flex flex-col items-center p-6 w-full">
+          <!-- Top Nav -->
+          <nav class="flex justify-between relative w-full mb-2" id="stepNav">
+            <!-- Progress line -->
+            <div
+              class="absolute top-1/2 left-0 right-0 h-4 bg-gray-200 -translate-y-1/2 -z-10"
+            >
+              <div
+                id="progressLine"
+                class="h-full bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-500 ease-out"
+                style="width: 20%"
+              ></div>
+            </div>
+
+            <!-- Step indicators -->
+            <button
+              class="step-nav flex flex-col items-center group"
+              data-step="0"
+            >
+              <div
+                class="size-16 rounded-full bg-white border-4 border-gray-300 group-[.active]:border-blue-800 transition-all duration-300 flex items-center justify-center shadow-md"
+              >
+                <i
+                  class="ri-user-3-fill text-3xl text-gray-400 group-[.active]:text-blue-800 transition-colors"
+                ></i>
+              </div>
+              <span
+                class="mt-2 text-sm font-medium text-gray-500 group-[.active]:text-blue-800 transition-colors"
+                >KYC</span
+              >
+            </button>
+
+            <button
+              class="step-nav flex flex-col items-center group"
+              data-step="1"
+            >
+              <div
+                class="size-16 rounded-full bg-white border-4 border-gray-300 group-[.active]:border-purple-600 transition-all duration-300 flex items-center justify-center shadow-md"
+              >
+                <i
+                  class="ri-car-fill text-3xl text-gray-400 group-[.active]:text-purple-800 transition-colors"
+                ></i>
+              </div>
+              <span
+                class="mt-2 text-sm font-medium text-gray-500 group-[.active]:text-purple-800 transition-colors"
+                >Vehicle</span
+              >
+            </button>
+
+            <button
+              class="step-nav flex flex-col items-center group"
+              data-step="2"
+            >
+              <div
+                class="size-16 rounded-full bg-white border-4 border-gray-300 group-[.active]:border-orange-600 transition-all duration-300 flex items-center justify-center shadow-md"
+              >
+                <i
+                  class="ri-printer-fill text-3xl text-gray-400 group-[.active]:text-orange-600 transition-colors"
+                ></i>
+              </div>
+              <span
+                class="mt-2 text-sm font-medium text-gray-500 group-[.active]:text-orange-600 transition-colors"
+                >Documents</span
+              >
+            </button>
+
+            <button
+              class="step-nav flex flex-col items-center group"
+              data-step="3"
+            >
+              <div
+                class="size-16 rounded-full bg-white border-4 border-gray-300 group-[.active]:border-yellow-500 transition-all duration-300 flex items-center justify-center shadow-md"
+              >
+                <i
+                  class="ri-file-search-fill text-3xl text-gray-400 group-[.active]:text-yellow-500 transition-colors"
+                ></i>
+              </div>
+              <span
+                class="mt-2 text-sm font-medium text-gray-500 group-[.active]:text-yellow-500 transition-colors"
+                >Review</span
+              >
+            </button>
+
+            <button
+              class="step-nav flex flex-col items-center group"
+              data-step="4"
+            >
+              <div
+                class="size-16 rounded-full bg-white border-4 border-gray-300 group-[.active]:border-green-500 transition-all duration-300 flex items-center justify-center shadow-md"
+              >
+                <i
+                  class="ri-file-list-2-fill text-3xl text-gray-400 group-[.active]:text-green-600 transition-colors"
+                ></i>
+              </div>
+              <span
+                class="mt-2 text-sm font-medium text-gray-500 group-[.active]:text-green-600 transition-colors"
+                >Complete</span
+              >
+            </button>
+          </nav>
+          <!-- Form Steps -->
+          <form class="w-full p-6 rounded">
+            <!-- step-1 -->
+            <div class="step hidden" id="step-0">
+              <div class="grid grid-cols-1 gap-4">
+                <!-- KYC -->
+                <div class="border p-4 rounded shadow">
+                  <h2 class="text-xl font-bold mb-4">KYC</h2>
+                  <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- product category  -->
+                    <div class="mb-4">
+                      <label class="block text-sm font-medium mb-1"
+                        >Product Category</label
+                      >
+                      <select
+                        class="w-full border border-gray-300 rounded px-3 py-2"
+                        name="country"
+                      >
+                        <option selected value="sl">Select</option>
+                        <option value="mp">Motor Private</option>
+                        <option value="mc">Motor Commercial</option>
+                        <option value="mcy">Motor Cycle</option>
+                        <option value="am">Add more...</option>
+                      </select>
+                    </div>
+
+                    <!--from  Date -->
+                    <div class="mb-4">
+                      <label
+                        for="dob"
+                        class="block text-sm font-medium text-gray-700 mb-1"
+                        >From Date</label
+                      >
+                      <input
+                        type="date"
+                        id="dob"
+                        name="fromdate"
+                        class="w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 py-2 px-3 border"
+                      />
+                    </div>
+                    <!--To Date -->
+                    <div class="mb-4">
+                      <label
+                        for="dob"
+                        class="block text-sm font-medium text-gray-700 mb-1"
+                      >
+                        To Date</label
+                      >
+                      <input
+                        type="date"
+                        id="dob"
+                        name="todate"
+                        class="w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 py-2 px-3 border"
+                      />
+                    </div>
+                    <!-- source  -->
+                    <div class="mb-4">
+                      <label class="block text-sm font-medium mb-1"
+                        >Source Of Business</label
+                      >
+                      <select
+                        class="w-full border border-gray-300 rounded px-3 py-2"
+                        name="country"
+                      >
+                        <option selected value="sl">Select</option>
+                        <option value="dc">Direct Customer</option>
+                        <option value="ag">Agent</option>
+                        <option value="Br">Broker</option>
+                        <option value="em">Employee</option>
+                        <option value="add">Add More ...</option>
+                      </select>
+                    </div>
+                    <!-- Apply partial  Toggle -->
+                    <div class="flex items-center">
+                      <input
+                        type="checkbox"
+                        id="sameAsPhysical"
+                        name="applypartial"
+                        class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                      />
+                      <label
+                        for="sameAsPhysical"
+                        class="ml-2 block text-md text-black tracking-wide font-medium"
+                        >Apply partial debiting for this customer</label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- CUSTOMER DETAILS -->
+                <div class="border p-4 rounded shadow">
+                  <h2 class="text-xl font-bold my-4 uppercase">
+                    Customer Details
+                  </h2>
+                  <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- customer type  -->
+                    <div class="mb-4">
+                      <label class="block text-sm font-medium mb-1"
+                        >Customer Type</label
+                      >
+                      <select
+                        class="w-full border border-gray-300 rounded px-3 py-2"
+                        name="customer"
+                      >
+                        <option selected value="sl">Select</option>
+                        <option value="individual">Individual</option>
+                        <option value="corporate">Corporate</option>
+                        <option value="publicsector">Public Sector</option>
+                        <option value="staff">Staff</option>
+                        <option value="add">Add More ...</option>
+                      </select>
+                    </div>
+
+                    <!-- pin number  -->
+                    <div class="mb-4">
+                      <label for="email" class="block text-sm font-medium mb-1"
+                        >PIN No.</label
+                      >
+                      <input
+                        type="text"
+                        id="pin"
+                        name="pin"
+                        placeholder="PIN NO."
+                        class="w-full border border-gray-300 rounded px-3 py-2"
+                      />
+                    </div>
+                    <!-- pin upload  -->
+                    <div class="mb-4">
+                      <label for="file" class="block text-sm font-medium mb-1">
+                        PIN Document
+                      </label>
+                      <input
+                        type="file"
+                        id="file"
+                        name="file"
+                        class="w-full border border-gray-300 rounded px-3 py-2 file:mr-4 file:py- file:px- file:rounded file:border-0 file:text-sm file:font-semibold file: file:text-blue-700 hover:file:cursor-pointer"
+                      />
+                    </div>
+                    <!-- Physical Adrress  -->
+                    <div class="mb-4">
+                      <label for="email" class="block text-sm font-medium mb-1"
+                        >Physical Adrress</label
+                      >
+                      <input
+                        type="text"
+                        id="physicaladdress"
+                        name="physicaladdress"
+                        placeholder="Physical Adrress"
+                        class="w-full border border-gray-300 rounded px-3 py-2"
+                      />
+                    </div>
+                    <!-- postal Adrress  -->
+                    <div class="mb-4">
+                      <label for="email" class="block text-sm font-medium mb-1"
+                        >Postal Adrress</label
+                      >
+                      <input
+                        type="text"
+                        id="postaladdress"
+                        name="postaladdress"
+                        placeholder="Postal Adrress"
+                        class="w-full border border-gray-300 rounded px-3 py-2"
+                      />
+                    </div>
+                    <!-- postal code  -->
+                    <div class="mb-4">
+                      <label for="email" class="block text-sm font-medium mb-1"
+                        >Postal Code</label
+                      >
+                      <input
+                        type="text"
+                        id="postalcode"
+                        name="postalcode"
+                        placeholder="Postal Code"
+                        class="w-full border border-gray-300 rounded px-3 py-2"
+                      />
+                    </div>
+                    <!-- country  -->
+                    <div class="mb-4">
+                      <label class="block text-sm font-medium mb-1"
+                        >Country</label
+                      >
+                      <select
+                        class="w-full border border-gray-300 rounded px-3 py-2"
+                        name="country"
+                      >
+                        <option selected value="sl">Select</option>
+                        <option value="kenya">Kenya</option>
+                        <option value="add">Add More ...</option>
+                      </select>
+                    </div>
+                    <!-- Town  -->
+                    <div class="mb-4">
+                      <label class="block text-sm font-medium mb-1">Town</label>
+                      <select
+                        class="w-full border border-gray-300 rounded px-3 py-2"
+                        name="town"
+                      >
+                        <option selected value="sl">Select</option>
+                        <option value="add">Add More ...</option>
+                      </select>
+                    </div>
+                    <!-- Mobile Number -->
+                    <div class="">
+                      <label
+                        for="mobileNumber"
+                        class="block text-sm font-medium text-gray-700 mb-1"
+                        >Mobile Number (Please include country codes)</label
+                      >
+                      <div class="grid grid-cols-3 gap-2">
+                        <input
+                          type="text"
+                          id="mobileCountryCode"
+                          name="mobileCountryCode"
+                          class="rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 py-2 px-3 border"
+                          placeholder="+1"
+                          value="+1"
+                        />
+                        <input
+                          type="text"
+                          id="mobileNumber"
+                          name="mobileNumber"
+                          class="col-span-2 rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 py-2 px-3 border"
+                          placeholder="Enter mobile number"
+                        />
+                      </div>
+                    </div>
+                    <!-- email  -->
+                    <div class="mb-4">
+                      <label for="email" class="block text-sm font-medium mb-1"
+                        >Email</label
+                      >
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter email"
+                        class="w-full border border-gray-300 rounded px-3 py-2"
+                      />
+                    </div>
+                    <!-- Upload scanned copies of identifications  -->
+                    <div class="mb-4">
+                      <label for="file" class="block text-sm font-medium mb-1">
+                        Upload scanned copies of identifications
+                      </label>
+                      <input
+                        type="file"
+                        id="file"
+                        name="file"
+                        class="w-full border border-gray-300 rounded px-3 py-2 file:mr-4 file:py- file:px- file:rounded file:border-0 file:text-sm file:font-semibold file: file:text-blue-700 hover:file:cursor-pointer"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!-- Bank Details (Optional) -->
+                <div class="border p-4 rounded shadow">
+                  <h2 class="text-xl font-bold mb-4">
+                    Bank Details (Optional)
+                  </h2>
+                  <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- How do you want surplus  -->
+                    <div class="mb-4">
+                      <label class="block text-sm font-medium mb-1"
+                        >How do you want surplus to be given/sent back?</label
+                      >
+                      <div class="flex flex-col md:flex-row gap-4 my-2">
+                        <!-- bank transfer  -->
+                        <div class="flex gap-2 items-center">
+                          <input
+                            type="checkbox"
+                            id="banktransfer"
+                            name="banktransfer"
+                            class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                          />
+                          <label for="banktransfer">Bank Transfer</label>
+                        </div>
+                        <!-- cheque  -->
+                        <div class="flex gap-2 items-center">
+                          <input
+                            type="checkbox"
+                            id="cheque"
+                            name="cheque"
+                            class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                          />
+                          <label for="cheque">Cheque</label>
+                        </div>
+                        <!-- mobile payment  -->
+                        <div class="flex gap-2 items-center">
+                          <input
+                            type="checkbox"
+                            id="mobilepayment"
+                            name="mobilepayment"
+                            class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                          />
+                          <label for="mobilepayment">Mobile Payment</label>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- bank info  -->
+                    <div
+                      id="bank"
+                      class="col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4 hidden"
+                    >
+                      <!-- bank name  -->
+                      <div class="mb-4">
+                        <label
+                          for="email"
+                          class="block text-sm font-medium mb-1"
+                          >Bank Name</label
+                        >
+                        <input
+                          type="text"
+                          id="bankname"
+                          name="bankname"
+                          placeholder="Bank Name"
+                          class="w-full border border-gray-300 rounded px-3 py-2"
+                        />
+                      </div>
+                      <!-- bank account name  -->
+                      <div class="mb-4">
+                        <label
+                          for="bankacoountname"
+                          class="block text-sm font-medium mb-1"
+                          >Bank Account Name</label
+                        >
+                        <input
+                          type="text"
+                          id="bankacoountname"
+                          name="bankacoountname"
+                          placeholder="Bank Account Name"
+                          class="w-full border border-gray-300 rounded px-3 py-2"
+                        />
+                      </div>
+                      <!--  account number  -->
+                      <div class="mb-4">
+                        <label
+                          for="acoountnumber"
+                          class="block text-sm font-medium mb-1"
+                          >Account Number</label
+                        >
+                        <input
+                          type="text"
+                          id="acoountnumber"
+                          name="acoountnumber"
+                          placeholder="Account Number"
+                          class="w-full border border-gray-300 rounded px-3 py-2"
+                        />
+                      </div>
+                      <!--  account branch  -->
+                      <div class="mb-4">
+                        <label
+                          for="acoountbranch"
+                          class="block text-sm font-medium mb-1"
+                          >Account Branch</label
+                        >
+                        <input
+                          type="text"
+                          id="acoountbranch"
+                          name="acoountbranch"
+                          placeholder="Account Branch"
+                          class="w-full border border-gray-300 rounded px-3 py-2"
+                        />
+                      </div>
+                    </div>
+                    <!-- cheque info  -->
+                    <div
+                      id="cheque-info"
+                      class="col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4 hidden"
+                    >
+                      <!--  cheque number  -->
+                      <div class="mb-4">
+                        <label
+                          for="chequenumber"
+                          class="block text-sm font-medium mb-1"
+                          >Cheque Number</label
+                        >
+                        <input
+                          type="text"
+                          id="chequenumber"
+                          name="chequenumber"
+                          placeholder="Cheque Number"
+                          class="w-full border border-gray-300 rounded px-3 py-2"
+                        />
+                      </div>
+                      <!-- chequedate  -->
+                      <div class="mb-4">
+                        <label
+                          for="chequedate"
+                          class="block text-sm font-medium mb-1"
+                          >Cheque Date</label
+                        >
+                        <input
+                          type="text"
+                          id="chequedate"
+                          name="chequedate"
+                          placeholder="Cheque Date"
+                          class="w-full border border-gray-300 rounded px-3 py-2"
+                        />
+                      </div>
+                      <!-- bank name  -->
+                      <div class="mb-4">
+                        <label
+                          for="email"
+                          class="block text-sm font-medium mb-1"
+                          >Bank Name</label
+                        >
+                        <input
+                          type="text"
+                          id="bankname"
+                          name="bankname"
+                          placeholder="Bank Name"
+                          class="w-full border border-gray-300 rounded px-3 py-2"
+                        />
+                      </div>
+                      <!--  account branch  -->
+                      <div class="mb-4">
+                        <label
+                          for="acoountbranch"
+                          class="block text-sm font-medium mb-1"
+                          >Account Branch</label
+                        >
+                        <input
+                          type="text"
+                          id="acoountbranch"
+                          name="acoountbranch"
+                          placeholder="Account Branch"
+                          class="w-full border border-gray-300 rounded px-3 py-2"
+                        />
+                      </div>
+                    </div>
+                    <!-- mobile info  -->
+                    <div
+                      id="mobile"
+                      class="col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4 hidden"
+                    >
+                      <!--  mobile number  -->
+                      <div class="mb-4">
+                        <label
+                          for="mobilenumber"
+                          class="block text-sm font-medium mb-1"
+                          >Mobile Number</label
+                        >
+                        <input
+                          type="text"
+                          id="mobilenumber"
+                          name="mobilenumber"
+                          placeholder="Mobile Number"
+                          class="w-full border border-gray-300 rounded px-3 py-2"
+                        />
+                      </div>
+                      <!-- mobile operator  -->
+                      <div class="mb-4">
+                        <label
+                          for="mobileoperator"
+                          class="block text-sm font-medium mb-1"
+                          >Mobile Operator
+                        </label>
+                        <input
+                          type="text"
+                          id="mobileoperator"
+                          name="mobileoperator"
+                          placeholder="Mobile Operator "
+                          class="w-full border border-gray-300 rounded px-3 py-2"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- step 2 -->
+            <div class="step hidden" id="step-1">
+              <h2 class="text-xl font-bold mb-4">Step 2: Contact</h2>
+              <div class="space-y-5">
+                <!-- Your Details -->
+                <div class="border p-6 rounded-lg space-y-4">
+                  <h3 class="text-xl font-bold">Your Details</h3>
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <!-- Title -->
+                    <div>
+                      <label
+                        for="title"
+                        class="block text-sm font-medium text-gray-700 mb-1"
+                        >Title</label
+                      >
+                      <select
+                        id="title"
+                        name="title"
+                        class="w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 py-2 px-3 border"
+                      >
+                        <option selected disabled value="">
+                          Select an option...
+                        </option>
+                        <option value="mr">Mr</option>
+                        <option value="mrs">Mrs</option>
+                        <option value="miss">Miss</option>
+                        <option value="dr">Dr</option>
+                      </select>
+                    </div>
+
+                    <!-- First Name -->
+                    <div>
+                      <label
+                        for="firstName"
+                        class="block text-sm font-medium text-gray-700 mb-1"
+                      >
+                        First Name <span class="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        id="firstName"
+                        name="firstName"
+                        placeholder="Enter your first name"
+                        class="w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 py-2 px-3 border"
+                      />
+                    </div>
+
+                    <!-- Middle Name -->
+                    <div>
+                      <label
+                        for="middleName"
+                        class="block text-sm font-medium text-gray-700 mb-1"
+                        >Middle Name</label
+                      >
+                      <input
+                        type="text"
+                        id="middleName"
+                        name="middleName"
+                        placeholder="Enter your middle name"
+                        class="w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 py-2 px-3 border"
+                      />
+                    </div>
+
+                    <!-- Last Name -->
+                    <div>
+                      <label
+                        for="lastName"
+                        class="block text-sm font-medium text-gray-700 mb-1"
+                      >
+                        Last Name <span class="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        id="lastName"
+                        name="lastName"
+                        placeholder="Enter your last name"
+                        class="w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 py-2 px-3 border"
+                      />
+                    </div>
+
+                    <!-- Date of Birth -->
+                    <div>
+                      <label
+                        for="dob"
+                        class="block text-sm font-medium text-gray-700 mb-1"
+                        >Date of Birth</label
+                      >
+                      <input
+                        type="date"
+                        id="dob"
+                        name="dob"
+                        class="w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 py-2 px-3 border"
+                      />
+                    </div>
+
+                    <!-- Place of Birth -->
+                    <div>
+                      <label
+                        for="placeOfBirth"
+                        class="block text-sm font-medium text-gray-700 mb-1"
+                        >Place of Birth</label
+                      >
+                      <input
+                        type="text"
+                        id="placeOfBirth"
+                        name="placeOfBirth"
+                        placeholder="Enter place of birth"
+                        class="w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 py-2 px-3 border"
+                      />
+                    </div>
+
+                    <!-- Gender -->
+                    <div>
+                      <label
+                        for="gender"
+                        class="block text-sm font-medium text-gray-700 mb-1"
+                        >Gender</label
+                      >
+                      <select
+                        id="gender"
+                        name="gender"
+                        class="w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 py-2 px-3 border"
+                      >
+                        <option selected disabled value="">
+                          Select an option...
+                        </option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Physical Address -->
+                <div class="border p-6 rounded-lg space-y-4">
+                  <h4 class="text-lg font-bold">Physical Address</h4>
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <!-- Country -->
+                    <div>
+                      <label
+                        for="country"
+                        class="block text-sm font-medium text-gray-700 mb-1"
+                        >Country</label
+                      >
+                      <select
+                        id="country"
+                        name="country"
+                        class="w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 py-2 px-3 border"
+                      >
+                        <option selected value="us">United States</option>
+                        <option value="ca">Canada</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="au">Australia</option>
+                      </select>
+                    </div>
+
+                    <!-- Street Address -->
+                    <div>
+                      <label
+                        for="streetAddress"
+                        class="block text-sm font-medium text-gray-700 mb-1"
+                        >Street Address</label
+                      >
+                      <input
+                        type="text"
+                        id="streetAddress"
+                        name="streetAddress"
+                        placeholder="Enter street address"
+                        class="w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 py-2 px-3 border"
+                      />
+                    </div>
+
+                    <!-- Address Line 2 -->
+                    <div>
+                      <label
+                        for="addressLine2"
+                        class="block text-sm font-medium text-gray-700 mb-1"
+                        >Address Line 2</label
+                      >
+                      <input
+                        type="text"
+                        id="addressLine2"
+                        name="addressLine2"
+                        placeholder="Apartment, suite, etc."
+                        class="w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 py-2 px-3 border"
+                      />
+                    </div>
+
+                    <!-- City -->
+                    <div>
+                      <label
+                        for="city"
+                        class="block text-sm font-medium text-gray-700 mb-1"
+                        >City</label
+                      >
+                      <input
+                        type="text"
+                        id="city"
+                        name="city"
+                        placeholder="Enter city"
+                        class="w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 py-2 px-3 border"
+                      />
+                    </div>
+
+                    <!-- State / Province / Region -->
+                    <div>
+                      <label
+                        for="state"
+                        class="block text-sm font-medium text-gray-700 mb-1"
+                        >State / Province / Region</label
+                      >
+                      <input
+                        type="text"
+                        id="state"
+                        name="state"
+                        placeholder="Enter state or province"
+                        class="w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 py-2 px-3 border"
+                      />
+                    </div>
+
+                    <!-- Postal Zip Code -->
+                    <div>
+                      <label
+                        for="postalCode"
+                        class="block text-sm font-medium text-gray-700 mb-1"
+                        >Postal Zip Code</label
+                      >
+                      <input
+                        type="text"
+                        id="postalCode"
+                        name="postalCode"
+                        placeholder="Enter postal code"
+                        class="w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 py-2 px-3 border"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Postal Address Toggle -->
+                  <div class="flex items-center">
+                    <input
+                      type="checkbox"
+                      id="sameAsPhysical"
+                      name="sameAsPhysical"
+                      class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                    />
+                    <label
+                      for="sameAsPhysical"
+                      class="ml-2 block text-sm text-gray-700"
+                      >Same as Physical Address</label
+                    >
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <!-- Country -->
+                    <div>
+                      <label
+                        for="postalCountry"
+                        class="block text-sm font-medium text-gray-700 mb-1"
+                        >Country</label
+                      >
+                      <select
+                        id="postalCountry"
+                        name="postalCountry"
+                        class="w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 py-2 px-3 border"
+                      >
+                        <option selected disabled value="">
+                          Select an option...
+                        </option>
+                        <option value="us">United States</option>
+                        <option value="ca">Canada</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="au">Australia</option>
+                      </select>
+                    </div>
+
+                    <!-- Street Address -->
+                    <div>
+                      <label
+                        for="postalStreetAddress"
+                        class="block text-sm font-medium text-gray-700 mb-1"
+                        >Street Address</label
+                      >
+                      <input
+                        type="text"
+                        id="postalStreetAddress"
+                        name="postalStreetAddress"
+                        placeholder="Enter street address"
+                        class="w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 py-2 px-3 border"
+                      />
+                    </div>
+
+                    <!-- Address Line 2 -->
+                    <div>
+                      <label
+                        for="postalAddressLine2"
+                        class="block text-sm font-medium text-gray-700 mb-1"
+                        >Address Line 2</label
+                      >
+                      <input
+                        type="text"
+                        id="postalAddressLine2"
+                        name="postalAddressLine2"
+                        placeholder="Apartment, suite, etc."
+                        class="w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 py-2 px-3 border"
+                      />
+                    </div>
+
+                    <!-- City -->
+                    <div>
+                      <label
+                        for="postalCity"
+                        class="block text-sm font-medium text-gray-700 mb-1"
+                        >City</label
+                      >
+                      <input
+                        type="text"
+                        id="postalCity"
+                        name="postalCity"
+                        placeholder="Enter city"
+                        class="w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 py-2 px-3 border"
+                      />
+                    </div>
+
+                    <!-- State / Province / Region -->
+                    <div>
+                      <label
+                        for="postalState"
+                        class="block text-sm font-medium text-gray-700 mb-1"
+                        >State / Province / Region</label
+                      >
+                      <input
+                        type="text"
+                        id="postalState"
+                        name="postalState"
+                        placeholder="Enter state or province"
+                        class="w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 py-2 px-3 border"
+                      />
+                    </div>
+
+                    <!-- Postal Zip Code -->
+                    <div>
+                      <label
+                        for="postalPostalCode"
+                        class="block text-sm font-medium text-gray-700 mb-1"
+                        >Postal Zip Code</label
+                      >
+                      <input
+                        type="text"
+                        id="postalPostalCode"
+                        name="postalPostalCode"
+                        placeholder="Enter postal code"
+                        class="w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 py-2 px-3 border"
+                      />
+                    </div>
+
+                    <!-- Length of Time at This Address -->
+                    <div>
+                      <label
+                        for="lengthOfTime"
+                        class="block text-sm font-medium text-gray-700 mb-1"
+                        >Length of time at this address?</label
+                      >
+                      <select
+                        id="lengthOfTime"
+                        name="lengthOfTime"
+                        class="w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 py-2 px-3 border"
+                      >
+                        <option selected disabled value="">
+                          Select an option...
+                        </option>
+                        <option value="lt1">Less than 1 year</option>
+                        <option value="1-2">1–2 years</option>
+                        <option value="3-5">3–5 years</option>
+                        <option value="gt5">More than 5 years</option>
+                      </select>
+                    </div>
+
+                    <!-- Phone Number -->
+                    <div class="md:col-span-2">
+                      <label
+                        for="phoneNumber"
+                        class="block text-sm font-medium text-gray-700 mb-1"
+                        >Phone Number (Please include country/area codes)</label
+                      >
+                      <div class="grid grid-cols-3 gap-2">
+                        <input
+                          type="text"
+                          id="phoneCountryCode"
+                          name="phoneCountryCode"
+                          class="rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 py-2 px-3 border"
+                          placeholder="+1"
+                          value="+1"
+                        />
+                        <input
+                          type="text"
+                          id="phoneNumber"
+                          name="phoneNumber"
+                          class="col-span-2 rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 py-2 px-3 border"
+                          placeholder="Enter phone number"
+                        />
+                      </div>
+                    </div>
+
+                    <!-- Mobile Number -->
+                    <div class="md:col-span-2">
+                      <label
+                        for="mobileNumber"
+                        class="block text-sm font-medium text-gray-700 mb-1"
+                        >Mobile Number (Please include country codes)</label
+                      >
+                      <div class="grid grid-cols-3 gap-2">
+                        <input
+                          type="text"
+                          id="mobileCountryCode"
+                          name="mobileCountryCode"
+                          class="rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 py-2 px-3 border"
+                          placeholder="+1"
+                          value="+1"
+                        />
+                        <input
+                          type="text"
+                          id="mobileNumber"
+                          name="mobileNumber"
+                          class="col-span-2 rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 py-2 px-3 border"
+                          placeholder="Enter mobile number"
+                        />
+                      </div>
+                    </div>
+
+                    <!-- ID Issuing Country -->
+                    <div>
+                      <label
+                        for="idIssuingCountry"
+                        class="block text-sm font-medium text-gray-700 mb-1"
+                        >ID Issuing Country</label
+                      >
+                      <select
+                        id="idIssuingCountry"
+                        name="idIssuingCountry"
+                        class="w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 py-2 px-3 border"
+                      >
+                        <option selected value="">Select an option...</option>
+                        <option value="us">USA</option>
+                        <option value="bd">Bangladesh</option>
+                        <option value="in">India</option>
+                      </select>
+                    </div>
+
+                    <!-- Nationality -->
+                    <div>
+                      <label
+                        for="nationality"
+                        class="block text-sm font-medium text-gray-700 mb-1"
+                        >Nationality</label
+                      >
+                      <select
+                        id="nationality"
+                        name="nationality"
+                        class="w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 py-2 px-3 border"
+                      >
+                        <option selected value="">Select an option...</option>
+                        <option value="bd">Bangladeshi</option>
+                        <option value="in">Indian</option>
+                        <option value="us">American</option>
+                      </select>
+                    </div>
+
+                    <!-- Account Manager -->
+                    <div>
+                      <label
+                        for="accountManager"
+                        class="block text-sm font-medium text-gray-700 mb-1"
+                        >Account Manager</label
+                      >
+                      <select
+                        id="accountManager"
+                        name="accountManager"
+                        class="w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 py-2 px-3 border"
+                      >
+                        <option selected value="">Select an option...</option>
+                        <option value="john">John Doe</option>
+                        <option value="jane">Jane Smith</option>
+                      </select>
+                    </div>
+
+                    <!-- Dealer -->
+                    <div>
+                      <label
+                        for="dealer"
+                        class="block text-sm font-medium text-gray-700 mb-1"
+                        >Dealer</label
+                      >
+                      <select
+                        id="dealer"
+                        name="dealer"
+                        class="w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 py-2 px-3 border"
+                      >
+                        <option selected value="">Select an option...</option>
+                        <option value="a">Dealer A</option>
+                        <option value="b">Dealer B</option>
+                      </select>
+                    </div>
+
+                    <!-- Promotion Token -->
+                    <div>
+                      <label
+                        for="promotionToken"
+                        class="block text-sm font-medium text-gray-700 mb-1"
+                        >Promotion Token</label
+                      >
+                      <input
+                        type="text"
+                        id="promotionToken"
+                        name="promotionToken"
+                        class="w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 py-2 px-3 border"
+                        placeholder="Enter promotion token"
+                      />
+                    </div>
+
+                    <!-- Registration Token -->
+                    <div>
+                      <label
+                        for="registrationToken"
+                        class="block text-sm font-medium text-gray-700 mb-1"
+                        >Registration Token</label
+                      >
+                      <input
+                        type="text"
+                        id="registrationToken"
+                        name="registrationToken"
+                        class="w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 py-2 px-3 border"
+                        placeholder="Enter registration token"
+                      />
+                    </div>
+
+                    <!-- Affiliate Token -->
+                    <div>
+                      <label
+                        for="affiliateToken"
+                        class="block text-sm font-medium text-gray-700 mb-1"
+                        >Affiliate Token</label
+                      >
+                      <input
+                        type="text"
+                        id="affiliateToken"
+                        name="affiliateToken"
+                        class="w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 py-2 px-3 border"
+                        placeholder="Enter registration token"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- step 3 -->
+            <div class="step hidden" id="step-2">
+              <h2 class="text-xl font-bold mb-4">Step 3: Address</h2>
+              <input
+                type="text"
+                placeholder="Address"
+                class="w-full mb-4 p-2 border rounded"
+              />
+            </div>
+            <!-- step 4 -->
+            <div class="step hidden" id="step-3">
+              <h2 class="text-xl font-bold mb-4">Step 4: Payment Info</h2>
+              <input
+                type="text"
+                placeholder="Card Number"
+                class="w-full mb-4 p-2 border rounded"
+              />
+            </div>
+            <!-- step 5 -->
+            <div class="step hidden" id="step-4">
+              <h2 class="text-xl font-bold mb-4">Step 5: Confirm</h2>
+              <p>Review and submit your information.</p>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="flex justify-between mt-6">
+              <button
+                type="button"
+                id="prevBtn"
+                class="bg-gray-400 text-white px-4 py-2 rounded hidden"
+              >
+                Previous
+              </button>
+              <button
+                type="button"
+                id="nextBtn"
+                class="btn-primary text-white px-4 py-2 rounded"
+              >
+                Next
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

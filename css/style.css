@@ -1,0 +1,82 @@
+:root {
+  --color--primary: #431070;
+  --color-secondary: #799db079;
+  --color-succsess: #10b981;
+  --color-danger: #ef4444;
+  --color-primary-bg: #1c1c1c;
+  --color-second-bg:#363333;
+  --color-third-bg:#353a42;
+  --color-border:#91a3ac65;
+}
+
+
+.text-primary{
+  color: var(--color--primary);
+}
+button {
+  cursor: pointer;
+}
+.border,.border-b {
+  border-color: var(--color-border);
+}
+
+.btn-primary {
+  background: var(--color--primary);
+}
+.btn-danger {
+  background-color: var(--color-danger);
+}
+
+.bg-primary {
+  background: var(--color--primary);
+}
+.bg-second{
+  background: var(--color-second-bg);
+}
+
+#sidebar nav li {
+ 
+  border-radius: 5px;
+
+}
+
+#sidebar nav li:hover {
+ background:var(--color-secondary);
+ transition-duration: 0.3s;
+  
+}
+
+
+.bg-image {
+  background: url("../assets/image/13167.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Custom animations */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+.animate-pulse {
+  animation: pulse 0.5s ease-in-out;
+}
+
+/* Custom progress line gradient */
+#progressLine {
+  background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3);
+}
+
+.custom-border{
+  border-color: #10b981;
+}
+
+
+ .rotate-90 {
+    transform: rotate(90deg);
+  }
+  
+  .arrow-icon {
+    transition: transform 0.3s ease;
+  }

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Fixed Sidebar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Toggle Button for small screens -->
+  <button id="toggleSidebar" class="md:hidden m-4 px-4 py-2 bg-blue-600 text-white rounded">
+    Toggle Sidebar
+  </button>
+
+  <!-- Sidebar -->
+<aside id="sidebar" class="fixed top-0 left-0 h-full w-64 bg-gray-800 text-white p-4 transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-50">
+  <!-- Close Button for small screens -->
+  <button id="closeSidebar" class="md:hidden mb-4 text-white text-xl">✕</button>
+  
+  <h2 class="text-xl font-bold mb-4">Sidebar</h2>
+  <ul class="space-y-2">
+    <li><a href="#" class="hover:underline">Dashboard</a></li>
+    <li><a href="#" class="hover:underline">Settings</a></li>
+    <li><a href="#" class="hover:underline">Profile</a></li>
+  </ul>
+</aside>
+
+
+  <!-- Main Content -->
+  <div class="md:ml-64 p-6">
+    <h1 class="text-2xl font-bold mb-4">Main Content Area</h1>
+    <p>This content is pushed to the right of the sidebar on large screens.</p>
+    <p>On smaller screens, click the "Toggle Sidebar" button to show/hide the sidebar.</p>
+  </div>
+
+  <!-- Script -->
+  <script>
+    const toggleBtn = document.getElementById("toggleSidebar");
+const closeBtn = document.getElementById("closeSidebar");
+const sidebar = document.getElementById("sidebar");
+
+toggleBtn.addEventListener("click", () => {
+  sidebar.classList.toggle("-translate-x-full");
+});
+
+closeBtn.addEventListener("click", () => {
+  sidebar.classList.add("-translate-x-full");
+});
+
+  </script>
+</body>
+</html>
