@@ -40,6 +40,11 @@ button {
 
 }
 
+
+
+
+
+
 #sidebar nav li:hover {
  background:var(--color-secondary);
  transition-duration: 0.3s;
@@ -81,3 +86,44 @@ button {
     transition: transform 0.3s ease;
   }
 
+/* Default sidebar width */
+.sidebar {
+  width: 18rem; /* w-72 equivalent */
+}
+
+/* Collapsed state */
+.sidebar.collapsed {
+  width: 5rem; /* Just enough for icons */
+}
+.sidebar.collapsed nav li a{
+  justify-content: center !important;
+}
+.sidebar.collapsed .logo,
+.sidebar.collapsed nav li span,
+.sidebar.collapsed .menu-text,
+.sidebar.collapsed .submenu-toggle .arrow-icon,
+.sidebar.collapsed .submenu {
+  display: none;
+}
+
+.sidebar.collapsed .menu-item {
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.sidebar.collapsed .submenu-toggle {
+  justify-content: center;
+}
+
+/* Ensure submenus don't show when collapsed */
+.sidebar.collapsed .submenu {
+  max-height: 0 !important;
+}
+
+/* Adjust for medium screens */
+@media (min-width: 768px) {
+  .sidebar {
+    transform: translateX(0);
+    transition-duration: 0.3s;
+  }
+}

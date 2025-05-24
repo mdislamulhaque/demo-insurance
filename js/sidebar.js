@@ -11,9 +11,21 @@
 
 // Mobile menu toggle
  const toggleBtn = document.getElementById("toggleSidebar");
+ const collapseBtn = document.getElementById("collapseSidebar");
     const closeBtn = document.getElementById("closeSidebar");
     const sidebar = document.getElementById("sidebar");
     const overlay = document.getElementById("overlay");
+    const mainContent =document.getElementById('main-content');
+
+      // Toggle for lg screens
+  if (collapseBtn) {
+    collapseBtn.addEventListener('click', function() {
+      sidebar.classList.toggle('collapsed');
+      mainContent.classList.toggle('md:ml-72')
+      mainContent.classList.toggle('md:ml-20')
+
+    });
+  }
 
     function openSidebar() {
       sidebar.classList.remove("-translate-x-full");

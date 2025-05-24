@@ -29,14 +29,14 @@
 
       <!-- Sidebar -->
       <div
-        class="fixed top-0 left-0 h-full w-72 bg-primary text-white p-4 transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-50 overflow-auto"
+        class="sidebar fixed top-0 left-0 h-full w-72 bg-primary text-white p-4 transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-50 overflow-auto"
         id="sidebar"
       >
         <nav class="">
           <div class="flex justify-between md:justify-center items-center">
             <img
               src="./assets/image/viva_logo.png"
-              class="mb-6"
+              class="mb-6 logo"
               alt="viva_logo"
             />
             <!-- Close Button for small screens -->
@@ -474,7 +474,7 @@
       </div>
 
       <!-- Main content -->
-      <div class="flex-1 md:ml-72 w-full">
+      <div id="main-content" class="flex-1 md:ml-72 w-full">
         <!-- nav -->
         <div
           class="flex justify-between items-center ps-2 pr-6 py-6 border-b mb-6"
@@ -484,6 +484,12 @@
             <button
               id="toggleSidebar"
               class="md:hidden m-4 px-4 py-2 btn-primary text-white rounded"
+            >
+              <i class="ri-menu-3-line"></i>
+            </button>
+            <button
+              id="collapseSidebar"
+              class="hidden md:block m-4 px-4 py-2 bg-primary text-white rounded"
             >
               <i class="ri-menu-3-line"></i>
             </button>
