@@ -35,6 +35,7 @@ nextBtn.addEventListener('click', () => {
     showStep(currentStep);
   } else {
     alert('Form submitted!');
+    window.location.href = 'pending.html';
   }
 });
 
