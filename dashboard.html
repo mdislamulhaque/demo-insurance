@@ -2,13 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
     <script src="./js/sidebar.js" defer></script>
     <script src="./js/step-from.js" defer></script>
     <script src="./js/data-table.js" defer></script>
     <script src="./js/chart.js" defer></script>
-   
+    <script src="./js/app.js" defer></script>
+
     <link rel="stylesheet" href="./css/style.css" />
 
     <link
@@ -57,7 +58,7 @@
             <li>
               <a
                 href="./dashboard.html"
-                class="flex justify-left items-center  gap-3  p-2 hover:bg-primary-dark rounded"
+                class="flex justify-left items-center gap-3 p-2 hover:bg-primary-dark rounded"
               >
                 <i class="ri-dashboard-fill text-left text-2xl"></i>
                 <span>Dashboard</span>
@@ -520,6 +521,7 @@
                 <i class="fas fa-envelope"></i>
               </button>
               <img
+                id="profile-image"
                 class="w-10 h-10 rounded-full"
                 src="https://randomuser.me/api/portraits/women/44.jpg"
                 alt="Profile"
@@ -529,6 +531,25 @@
                 <p class="text-xs text-blue-700">Agent</p>
               </div>
             </div>
+            <!-- Modal -->
+            <div
+                id="profileModal"
+                class="bg-white p-6 rounded-lg shadow-lg w-48 text-center hidden absolute top-24 right-4 z-50"
+              >
+                <button
+                  id="closeModal"
+                  class="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+                >
+                  &times;
+                </button>
+                <h2 class="text-lg font-semibold mb-4">Profile Options</h2>
+                <button
+                  id="logoutBtn"
+                  class="w-full bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded"
+                >
+                  Logout
+                </button>
+              </div>
           </div>
         </div>
         <!-- Dashboard Content -->

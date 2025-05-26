@@ -9,6 +9,28 @@
 //   });
 // });
 
+const profileImage = document.getElementById('profile-image');
+const profileModal = document.getElementById('profileModal');
+const closeModal = document.getElementById('closeModal');
+const logoutBtn = document.getElementById('logoutBtn');
+
+// Show modal when profile image is clicked
+profileImage.addEventListener('click', () => {
+  profileModal.classList.remove('hidden');
+  
+});
+
+// Close modal
+closeModal.addEventListener('click', () => {
+  profileModal.classList.add('hidden');
+});
+
+// Logout button action
+logoutBtn.addEventListener('click', () => {
+  // Optional: clear sessionStorage/localStorage or make API call
+  window.location.href = 'index.html'; // Redirect to login or home page
+});
+
 // Mobile menu toggle
  const toggleBtn = document.getElementById("toggleSidebar");
  const collapseBtn = document.getElementById("collapseSidebar");
